@@ -1,0 +1,180 @@
+.roadmap
+    padding: 10px
+    h2 
+        color: #fff
+        font-family: 'robot'
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 10px
+        margin-top: 30px
+        font-size: 2rem
+        @media (min-height: 660px)
+            font-size: 2.8rem
+    
+.roadmap-box
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    padding-top: 40px
+    margin: 10px
+    background-color: #fff
+    border-radius: 5px
+    margin-bottom: 160px
+
+    .roadmap-decorator
+        position: absolute
+        top: -30px
+        left: 5px
+        width: 30px
+        transform: rotate(30deg)
+        
+    .roadmap-header
+        position: absolute
+        top: -20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: start
+
+        .number-circle 
+            width: 40px
+            height: 40px
+            margin-bottom: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #fff
+            padding: 5px
+            font-family: 'robot'
+            font-weight: bold
+            font-size: 1.5rem
+            border-radius: 50%
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, .3)
+
+        .roadmap-title
+            text-align: center
+            padding: 0 15px
+            font-weight: bold
+            
+
+    &.roadmap-1 .number-circle, &.roadmap-1 .roadmap-title
+        color: #f74e9b
+    &.roadmap-2 .number-circle, &.roadmap-2 .roadmap-title
+        color: #e82227
+    &.roadmap-3 
+        .roadmap-header
+            top: -30px
+        margin-bottom: 120px
+
+        @media (min-height: 640px)
+            margin-bottom: 100px
+            .roadmap-desc
+                font-size: 1rem
+
+        .number-circle, 
+            color: #40b253
+            margin: 10px
+            margin-bottom: 0
+        .roadmap-title
+            color: #40b253
+            margin: 10px
+            margin-top: 0
+            margin-bottom: 0
+        .roadmap-img.full
+            width: 80%
+        .roadmap-desc
+            margin-top: 10px
+            font-size: .95rem
+    &.roadmap-4 
+        .number-circle, &.roadmap-4 .roadmap-title
+            color: #77787a
+        .roadmap-img.floating
+            bottom: -70px
+    &.roadmap-5 
+        margin-bottom: 100px
+        .roadmap-header
+            top: -30px
+        @media (min-height: 640px)
+            margin-bottom: 100px
+            .roadmap-desc
+                font-size: 1rem
+
+        .number-circle, 
+            color:#f6921e
+            margin: 10px
+            margin-bottom: 0
+        .roadmap-title
+            color: #f6921e
+            margin: 10px
+            margin-top: 0
+            margin-bottom: 0
+        .roadmap-img.full
+            width: 80%
+        .roadmap-desc
+            margin-top: 10px
+            font-size: .95rem
+    &.roadmap-6 
+        .number-circle, &.roadmap-6 .roadmap-title
+            color: #26a9e0
+        .roadmap-img.floating
+            width: 100px
+            bottom: -90px
+    &.roadmap-7 .number-circle, &.roadmap-7 .roadmap-title
+        color: #872984
+
+    .roadmap-desc
+        margin-top: 30px
+        text-align: center
+        font-size: 1rem
+        margin-bottom: 10px
+
+    .roadmap-box-img-container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+
+    .roadmap-img.floating
+        position: absolute
+        bottom: -50px
+        width: 80px
+        border-radius: 5px
+        
+        &.right
+            transform: rotate(10deg)
+            right: 0px
+        &.left
+            transform: rotate(-10deg)
+            right: auto
+            left: 0px
+
+
+
+
+
+.slide:nth-child(2) .roadmap-decorator
+    width: 60px
+    transform: rotate(-5deg)
+
+.slide:nth-child(3) .roadmap-decorator
+    left: auto
+    right: -5px
+    top: -20px
+    width: 30px
+    transform: rotate(10deg)
+
+.slide:nth-child(4) .roadmap-decorator
+    width: 60px
+    transform: rotate(-5deg)
+
+.slide:nth-child(6) .roadmap-decorator
+    left: auto
+    right: -5px
+    top: -40px
+    width: 60px
+    transform: rotate(10deg)
+
+.slide:nth-child(7) .roadmap-decorator
+    width: 80px
+    transform: rotate(-5deg)
