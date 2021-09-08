@@ -5,6 +5,18 @@ new fullpage("#fullpage", {
 
   onLeave: (origin, destination, direction) => {
     if (destination.index === 1 && direction === "down") {
+      const mintl = gsap.timeline();
+      mintl
+        .from(".buybox", { opacity: 0, y: 60, duration: 0.4 }, "+=.6")
+        .from(".buybox h3", { opacity: 0, y: 60, duration: 0.4 }, ">")
+        .from(".buybox button", { opacity: 0, y: 60, duration: 0.4 }, ">")
+        .from(
+          ".buybox img",
+          { opacity: 0, y: 60, duration: 0.4, stagger: 0.3 },
+          ">"
+        )
+        .from(".buybox img", { rotation: 0, duration: 0.2, stagger: 0.2 }, ">");
+    } else if (destination.index === 2 && direction === "down") {
       const roadmaptl = gsap.timeline();
       roadmaptl
         .from(".roadmap h2", { opacity: 0, y: 60, duration: 0.4 }, "+=.6")
@@ -20,7 +32,7 @@ new fullpage("#fullpage", {
           x: -30,
           duration: 0.4,
         });
-    } else if (destination.index === 2 && direction === "down") {
+    } else if (destination.index === 3 && direction === "down") {
       const attributestl = gsap.timeline();
       attributestl
         .from(".attributes h2", { opacity: 0, y: 60, duration: 0.4 }, "+=.6")
@@ -36,7 +48,7 @@ new fullpage("#fullpage", {
           duration: 0.3,
           stagger: 0.2,
         });
-    } else if (destination.index === 3 && direction === "down") {
+    } else if (destination.index === 4 && direction === "down") {
       const bodytl = gsap.timeline();
       bodytl
         .from(".bodyparts h2", { opacity: 0, y: 60, duration: 0.4 }, "+=.6")
@@ -57,7 +69,7 @@ new fullpage("#fullpage", {
           { opacity: 0, y: 60, duration: 0.4 },
           ">"
         );
-    } else if (destination.index === 4 && direction === "down") {
+    } else if (destination.index === 5 && direction === "down") {
       const teamtl = gsap.timeline();
       teamtl
         .from(".team h2", { opacity: 0, y: 60, duration: 0.4 }, "+=.6")
@@ -71,13 +83,6 @@ new fullpage("#fullpage", {
           { opacity: 0, duration: 0.3, stagger: 0.2 },
           ">"
         );
-    } else if (destination.index === 5 && direction === "down") {
-      const buytl = gsap.timeline();
-      buytl.from(
-        ".buy .container",
-        { opacity: 0, y: 60, duration: 0.4 },
-        "+=.6"
-      );
     } else if (destination.index === 6 && direction === "down") {
       const faqtl = gsap.timeline();
       faqtl
