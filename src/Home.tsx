@@ -59,7 +59,7 @@ const Home = (props: HomeProps) => {
 
   const refreshCandyMachineState = () => {
     (async () => {
-      if (!wallet) return;
+      //if (!wallet) return;
 
       const {
         candyMachine,
@@ -206,6 +206,8 @@ const Home = (props: HomeProps) => {
           </MintButton>
           {!wallet ? (<ConnectButton>Connect Wallet</ConnectButton>) : (<ConnectButton disabled>{shortenAddress(wallet.publicKey.toBase58())}</ConnectButton>) }
       </MintContainer>
+
+      <h3>{itemsRedeemed && itemsAvailable != 0 ? itemsRedeemed + "/" + itemsAvailable : ""}</h3>
 
       <Snackbar
         open={alertState.open}
