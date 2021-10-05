@@ -1,0 +1,17 @@
+.MuiPaper-root {
+    border-radius: 15px !important;
+}
+
+.MuiDialogTitle-root {
+    background-color: #f89016 !important;
+}
+
+.MuiTypography-root {
+    color: #FFF !important;
+    font-family: 'Montserrat' !important;
+    font-size: 24px !important;
+}
+
+.MuiList-root {
+    background-color: #e6ac68 !important;
+}
