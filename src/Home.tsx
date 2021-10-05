@@ -168,7 +168,7 @@ const Home = (props: HomeProps) => {
   const mintDate = props.startDate * 1000;
 
   useEffect(() => {
-    if (itemsRedeemed > 5) {
+    if (itemsRedeemed > 130) {
       setIsSoldOut(true);
     }
   })
