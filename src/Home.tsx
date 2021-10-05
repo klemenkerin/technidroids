@@ -167,7 +167,7 @@ const Home = (props: HomeProps) => {
 
   const mintDate = props.startDate * 1000;
 
-  if (itemsRedeemed > 2) setIsActive(false);
+  if (itemsRedeemed > 3) setIsActive(false);
 
   return (
     <main>
@@ -189,7 +189,7 @@ const Home = (props: HomeProps) => {
             onClick={onMint}
             variant="contained"
           >
-            {isSoldOut || itemsRedeemed > 2 ? (
+            {isSoldOut || itemsRedeemed > 3 ? (
               "SOLD OUT"
             ) : isActive ? (
               isMinting ? (
