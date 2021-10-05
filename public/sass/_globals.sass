@@ -1,0 +1,107 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: none
+    scroll-behavior: smooth
+    font-family: 'Montserrat'
+
+.container 
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+
+img 
+    max-width: 100%
+
+a
+    text-decoration: none
+
+.button
+    line-height: 35px
+    text-align: center
+    padding: 5px 10px
+    border-radius: 30px
+    background-color: $secondary
+    font-family: "Montserrat"
+    font-size: .8rem
+    font-weight: bold
+    color: #fff
+    transition: all .3s ease-out
+
+    &:hover
+        background-color: $secondary-d
+
+.swiper 
+    width: 100%
+    padding-top: 50px
+    padding-bottom: 50px
+
+    @media (min-width: 550px)
+        width: 95%!important
+
+    @media (min-width: 1050px)
+        width: 85%!important
+     
+
+.swiper-slide 
+    background-position: center
+    background-size: cover
+    width: 320px
+
+    @media (min-width: 550px)
+        width: 300px
+
+    @media (min-width: 750px)
+        width: 350px
+
+    @media (min-width: 1050px)
+        width: 400px
+
+    &-next, &-prev 
+        opacity: .5
+    
+    &-next 
+        transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(-30deg) scale(.7)!important
+    &-prev 
+        transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(30deg) scale(.7)!important
+
+.telegram-link
+    position: fixed
+    bottom: 30px
+    left: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 15px
+    background-color: #2da5e1
+    border-radius: 50%
+
+    .fab
+        color: #fff
+        font-size: 1.8rem
+
+
+body
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../images/hero.jpg")
+    background-size: cover
+    background-position: center
+
+#fullpage 
+    .fp-controlArrow.fp-prev 
+        border-width: 18.5px 14px 18.5px 0
+
+        @include tablet()
+            border-width: 28.5px 24px 28.5px 0
+
+        @include desktop()
+            border-width: 38.5px 34px 38.5px 0
+
+    .fp-controlArrow.fp-next
+        border-width: 18.5px 0 18.5px 14px
+
+        @include tablet()
+            border-width: 28.5px 0 28.5px 24px
+
+        @include desktop()
+            border-width: 38.5px 0 38.5px 34px
